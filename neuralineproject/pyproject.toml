@@ -1,22 +1,30 @@
-[project]
-name = "neuralineproject"
-version = "0.1.0"
-description = ""
-authors = [
-    {name = "Your Name",email = "you@example.com"}
-]
-readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "flask (>=3.1.1,<4.0.0)",
-    "flask-sqlalchemy (>=3.1.1,<4.0.0)",
-    "psycopg2-binary (>=2.9.10,<3.0.0)"
-]
-
 [tool.poetry]
-packages = [{include = "neuralineproject", from = "src"}]
+name = "banco-de-buracos"
+version = "0.1.0"
+description = "Sistema para registro de buracos e problemas urbanos"
+authors = ["Your Name <your@email.com>"]
+readme = "README.md"
 
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^2.0.1"
+flask-sqlalchemy = "^2.5.1"
+psycopg2-binary = "^2.9.1"
+geoalchemy2 = "^0.12.5"
+python-dotenv = "^0.19.0"
+google-api-python-client = "^2.36.0"
+google-auth-httplib2 = "^0.1.0"
+google-auth-oauthlib = "^0.4.6"
+Pillow = "^9.0.0"
+requests = "^2.26.0"
+python-dateutil = "^2.8.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
+black = "^22.1.0"
+flake8 = "^4.0.1"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
